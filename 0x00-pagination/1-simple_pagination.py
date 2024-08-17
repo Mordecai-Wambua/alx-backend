@@ -2,11 +2,10 @@
 
 
 import csv
-import math
-from typing import List
+from typing import List, Tuple
 
 
-def index_range(page: int, page_size: int) -> tuple:
+def index_range(page: int, page_size: int) -> Tuple[int, int]:
     """Return tuple containing the start index and end index."""
     offset = (page - 1) * page_size
     end = offset + page_size
@@ -38,6 +37,6 @@ class Server:
             assert isinstance(page_size, int) and page_size > 0
             start, end = index_range(page, page_size)
             data = self.dataset()
-            if start >= len(data):
+            if start > len(data):
                 return []
             return data[start:end]
