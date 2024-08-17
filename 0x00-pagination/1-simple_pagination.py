@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
-
-
+"""Class and fuction to implement offset pagination."""
 import csv
 from typing import List, Tuple
 
