@@ -36,5 +36,8 @@ class Server:
             """Provide requested page elements."""
             assert isinstance(page, int) and page > 0
             assert isinstance(page_size, int) and page_size > 0
-            output = index_range(page, page_size)
-            return self.dataset()[output[0]:output[1]]
+            start, end = index_range(page, page_size)
+            data = self.dataset()
+            if start >= len(data):
+                return []
+            return data[start:end]
