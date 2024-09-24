@@ -33,7 +33,7 @@ At the end of this project, you are expected to be able to explain to anyone, wi
 
 ## Required Files for the Project
 
-package.json
+**package.json**
 
 ```bash
 {
@@ -74,7 +74,7 @@ package.json
   }
 ```
 
-.babelrc
+**.babelrc**
 
 ```bash
 {
