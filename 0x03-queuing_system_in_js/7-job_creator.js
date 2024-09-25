@@ -64,6 +64,6 @@ for (const job of jobs) {
   });
 
   jobitem.on('progress', (progress) => {
-    console.log(`Notification job ${jobitem.id} ${progress}% completed`);
+    console.log(`Notification job ${jobitem.id} ${progress}% complete`);
   });
 }
